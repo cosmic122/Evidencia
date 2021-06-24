@@ -1,14 +1,13 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Menu {
 
     public static BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
+    //constructores
     Doctores doctores = new Doctores();
     Pacientes pacientes = new Pacientes();
     Citas citas = new Citas();
@@ -20,6 +19,7 @@ public class Menu {
 
     public void desplegar() throws IOException {
 
+        //*****headers*****
         ArrayList<String> headDoctores = new ArrayList<>();
         headDoctores.add("ID");
         headDoctores.add("Nombre");
@@ -50,6 +50,8 @@ public class Menu {
         String[] tokensC = tempC.split(", ");
         String headerC = (tokensC[0] + " | " + tokensC[1] + " | " + tokensC[2] + " | " + tokensC[3]);
 
+
+        // menu principal
         while (true) {
 
             // menu
