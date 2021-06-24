@@ -8,14 +8,18 @@ public class credenciales {
 
     public static BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
+    // archivo donde estan guardadas las credenciales
     String inputFilename = "D:\\Evidencia\\src\\src\\credenciales.txt";
 
+    // inicializar hashmap
     public static HashMap<String, String> credMap = new HashMap<>();
 
     public HashMap<String, String> loadCreds() throws IOException {
 
+        //lector de archivos
         BufferedReader in = new BufferedReader(new FileReader(inputFilename));
 
+        //lee los contenidos del archivo, linea por linea, separandolas en arraylist donde encuentre una coma
         String line;
 
         while((line = in.readLine()) !=null) {
@@ -28,10 +32,11 @@ public class credenciales {
 
         }
 
-        return credMap;
+        return credMap; // regresa mapa de credenciales
 
     }
 
+    //validador
     public void validate() throws IOException{
 
         System.out.println("Introduzca su ID de usuario: ");
