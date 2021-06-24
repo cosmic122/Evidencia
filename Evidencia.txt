@@ -1,0 +1,160 @@
+// Cargar base de datos
+
+Cargar doctores.txt
+	Incluir int DocId
+	Incluir string DocName
+	Incluir string Especialidad
+
+Cargar pacientes.txt
+	Incluir int PId
+	Incluir string PName
+
+Cargar citas.txt
+	Incluir int ApptId
+	Incluir Date ApptDate
+	Incluir Time ApptTime
+	Incluir ApptRsn string
+
+Cargar credenciales.txt
+	Declarar int AdminId
+	Declarar string AdminPW
+
+//Validación de usuario administrador
+
+Imprimir "porfavor introduzca su Id"
+Leer IdInput 
+Comparar IdInput con AdminId
+Regresar error si no es un usuario válido
+Continúa si se encuentra un match
+
+Imprimir "porfavor introduzca su contraseña"
+Leer y guardar en PWInput 
+Comparar PWInput con AdminPW
+Regresar error si contraseña inválida
+Continúa si contraseña correcta
+
+// Seleccionar opción
+
+Imprime opciones
+1. Registrar doctor
+2. Registrar paciente
+3. Registrar cita
+4. Ver lista de doctores
+5. Ver lista de pacientes
+6. Ver citas
+7. Salir
+
+Leer UserInput
+Regresar error si el input no es válido
+
+Caso 1
+	
+	Imprimir "Introduzca nombre del doctor"
+	Leer y guardar en DocName
+	Imprimir "Introduzca la especialidad del doctor"
+	Leer y guardar en Especialidad
+
+	Generar ID del doctor basado en el index y guardar en DocId
+	
+	Imprimir "Confirmación de datos"
+	Imprimir "ID del Doctor: " + DocID
+	Imprimir "Nombre del Doctor: " + DocName
+	Imprimir "Especialidad del Doctor: " + Especialidad
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+
+Caso 2
+
+	Imprimir "Introduzca nombre del paciente"
+	Leer y guardar en PName
+	
+	Guardar ID del paciente basado en el index y guardar en PId
+
+	Imprimir "Confirmación de datos"
+	Imprimir "ID del Paciente" + PID
+	Imprimir "Nombre del Paciente" + PName
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+
+Caso 3
+
+	Imprimir "Introduzca la fecha de su cita"
+	Leer y guardar en ApptDate
+	Imprimir "Introduzca la hora deseada"
+	Leer y guardar en ApptTime
+	Imprimir "Cuál es el motivo de la cita?"
+	Leer y guardar en ApptRsn
+
+	Guardar ID de la cita basado en el index y guardar en ApptId
+
+	Imprimir "Confirmación de datos"
+	Imprimir "ID de la cita: " + ApptID
+	Imprimir "Fecha de la cita: " + ApptDate
+	Imprimir "Hora de la cita: " + ApptTime
+	Imprimir "Motivo de la cita: " + ApptRsn
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+	
+Caso 4
+
+	Por cada entrada en doctores.txt
+	Imprimir "Lista de doctores"
+	Imprimir "ID del Doctor: " + DocID
+	Imprimir "Nombre del Doctor: " + DocName
+	Imprimir "Especialidad del Doctor: " + Especialidad
+	Imprimir salto de línea
+	Imprimir " *********** "
+	Imprimir salto de línea
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+
+Caso 5
+
+	Por cada entrada en pacientes.txt
+	Imprimir "Lista de pacientes"
+	Imprimir "ID del Paciente" + PId
+	Imprimir "Nombre del Paciente: " + PName
+	Imprimir salto de línea
+	Imprimir " *********** "
+	Imprimir salto de línea
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+
+Caso 6
+
+	Por cada entrada en citas.txt
+	Imprimir "Lista de citas"
+	Imprimir "ID de la cita" + ApptId
+	Imprimir "Fecha de la cita: " + ApptDate
+	Imprimir "Hora de la cita: " + ApptTime
+	Imprimir "Motivo de la cita: " + ApptRsn
+	Imprimir salto de línea
+	Imprimir " *********** "
+	Imprimir salto de línea
+
+	Imprimir "Presione enter para volver al menu principal"
+	Leer input
+	Volver al menú
+	
+
+Caso 7
+
+	Borrar datos en doctores.txt
+	Borrar datos en pacientes.txt
+	Borrar datos en citas.txt
+
+	Guardar datos en doctores.txt
+	Guardar datos en pacientes.txt
+	Guardar datos en citas.txt
+
+Terminar programa
